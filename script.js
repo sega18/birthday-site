@@ -4,12 +4,16 @@ function celebrate() {
     const button = document.querySelector('.button');
     const video = document.getElementById('fireworksVideo');
     const countdown = document.getElementById('countdown');
+    const music = document.getElementById('backgroundMusic'); // Ссылка на аудио элемент
     
     button.classList.add('clicked');
     video.style.display = 'block';  // Показываем видео
     video.play(); // Запускаем видео для уверенности
     startCountdown(); // Запускаем таймер
     countdown.style.display = 'block'; // Показываем таймер
+    
+    // Запускаем музыку
+    music.play();
 }
 
 function startCountdown() {
@@ -37,3 +41,4 @@ function startCountdown() {
     updateCountdown(); // Обновление при загрузке
     const interval = setInterval(updateCountdown, 1000);
 }
+
